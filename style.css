@@ -11,143 +11,155 @@ body {
 }
 
 .sidebar {
-  width: 210px;
-  background: linear-gradient(180deg, #b71c1c 80%, #fff 100%);
+  width: 225px;
+  background: linear-gradient(180deg, #fff 60%, #b71c1c 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-  box-shadow: 2px 0 10px #b71c1c09;
+  align-items: flex-start;
+  padding-top: 0;
+  box-shadow: 2px 0 8px #b71c1c11;
 }
 
-.logo {
-  color: #fff;
-  font-size: 1.7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 32px;
+.sidebar nav {
+  width: 100%;
+  padding-top: 60px;
 }
 
-.sidebar nav ul {
+.sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
-.sidebar nav ul li {
-  border-radius: 8px 0 0 8px;
-  margin-bottom: 6px;
+.sidebar li {
+  margin-bottom: 10px;
+  border-radius: 0 20px 20px 0;
   transition: background 0.2s, color 0.2s;
-  font-size: 1.04rem;
 }
 
-.sidebar nav ul li a {
-  color: #fff;
+.sidebar li.active,
+.sidebar li:hover {
+  background: #b71c1c22;
+}
+
+.sidebar a {
+  color: #b71c1c;
   text-decoration: none;
   display: block;
-  padding: 13px 26px;
-  transition: color 0.2s, background 0.2s;
+  padding: 16px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
-.sidebar nav ul li.active,
-.sidebar nav ul li:hover {
-  background: #fff;
+.sidebar li.active a, .sidebar li:hover a {
+  color: #fff;
+  background: #b71c1c;
+  border-radius: 0 20px 20px 0;
 }
 
-.sidebar nav ul li.active a,
-.sidebar nav ul li:hover a {
-  color: #b71c1c;
-}
-
-.content {
+.main-content {
   flex: 1;
-  padding: 48px 0;
-  background: #fff;
+  padding: 48px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
 }
 
-h1 {
+.title {
   color: #b71c1c;
+  font-size: 3rem;
+  letter-spacing: 2px;
   margin-bottom: 32px;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
+  margin-top: 40px;
+  text-shadow: 1px 2px 0 #fff7, 0 2px 12px #b71c1c18;
 }
 
-.projetos-lista {
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.social-btn {
+  background: #b71c1c;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px #b71c1c22;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: none;
+  outline: none;
+}
+
+.social-btn:hover {
+  background: #fff;
+  color: #b71c1c;
+  border: 2px solid #b71c1c;
+}
+
+.projetos-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: center;
+  margin-top: 30px;
+  width: 80%;
 }
 
 .projeto-card {
   background: #fff;
-  border: 2px solid #b71c1c;
-  border-radius: 16px;
-  padding: 32px 28px;
-  box-shadow: 0 2px 16px #b71c1c10;
+  border: 2.5px solid #b71c1c;
+  border-radius: 18px;
+  padding: 30px 28px 36px 28px;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0 4px 24px #b71c1c16;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 240px;
-  max-width: 320px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.projeto-card:hover {
+  box-shadow: 0 6px 32px #b71c1c22;
+  border-color: #c62828;
 }
 
 .projeto-card h2 {
+  margin: 0 0 12px 0;
   color: #b71c1c;
-  margin: 0 0 14px 0;
   font-size: 1.3rem;
 }
 
 .projeto-card p {
-  color: #444;
+  color: #333;
   margin-bottom: 18px;
+  font-size: 1.04rem;
 }
 
-.btn {
+.btn-ver {
   background: #b71c1c;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 10px 22px;
+  border-radius: 7px;
+  padding: 10px 20px;
   font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px #b71c1c22;
+  transition: background 0.2s, color 0.2s;
   margin-top: auto;
 }
 
-.btn:hover {
-  background: #961111;
-}
-
-.projeto-detalhe-card {
+.btn-ver:hover {
   background: #fff;
-  border: 2px solid #b71c1c;
-  border-radius: 16px;
-  padding: 40px 36px;
-  box-shadow: 0 2px 24px #b71c1c10;
-  min-width: 340px;
-  max-width: 540px;
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projeto-detalhe-card h1 {
   color: #b71c1c;
-  margin-bottom: 18px;
-  font-size: 1.6rem;
-}
-
-.projeto-detalhe-card p {
-  color: #444;
-  margin-bottom: 22px;
-  text-align: center;
+  border: 2px solid #b71c1c;
 }
